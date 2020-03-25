@@ -1,0 +1,316 @@
+I need to start my research or pick a topic 
+
+I need help choosing a topic 
+
+I need help to understand my assignment 
+
+I want to learn more about a possible topic 
+
+I need background informatiofn on a topic 
+
+I need to turn my topic into a research question 
+
+I am not sure what types of sources I need 
+
+I am not sure where to search 
+
+I need help searching 
+
+I am not sure where to search 
+
+I need search tips 
+
+I searched and found too little or too much 
+
+The library does not have the item I need 
+
+I do not know which items are relevant to my topic 
+
+Using what you've found to find more 
+
+I need to select terms or keywords to search with 
+
+I searched and found too little or too much 
+
+These do not describe my need 
+ 
+
+ 
+
+I need to find sources for my research 
+
+I am looking for articles 
+
+I am looking for peer-reviewed articles 
+
+I am looking for newspaper articles 
+
+I am not sure where to search 
+
+I need to select terms or keywords to search with 
+
+I need search tips 
+
+Nothing I found was in full text 
+
+I searched and found too little or too much 
+
+I am only supposed to use print or non-Internet sources 
+
+In Google Scholar I want to add IU Libraries to my library links 
+
+I want to find or browse journals by subject 
+
+I am not sure what types of sources I need 
+
+I am looking for books 
+
+I want to find books on my topic 
+
+I want to browse print books in the library on my topic 
+
+I am looking for primary sources 
+
+I only want to find e-Books 
+
+I need to select terms or keywords to search with 
+
+I need help searching 
+
+I am not sure where to search 
+
+I need search tips 
+
+I searched and found too little or too much 
+
+The library does not have the item I need 
+
+I do not know which items are relevant to my topic 
+
+Using what you've found to find more 
+
+I am looking for journals 
+
+I am looking for a specific journal 
+
+I want to find or browse journals by subject 
+
+I need info about a specific journal 
+
+I need to know if a journal is significant in my field 
+
+I am looking for primary sources 
+
+I am looking for statistics  
+
+I need company or industry information 
+
+I am looking for a thesis or dissertation 
+
+I need help searching 
+
+I am not sure where to search 
+
+I need search tips 
+
+I searched and found too little or too much 
+
+The library does not have the item I need 
+
+I do not know which items are relevant to my topic 
+
+Using what you've found to find more 
+
+The library does not have the item I need 
+
+I need items in languages other than English 
+
+I am looking for maps 
+
+I am looking for images 
+
+I am not sure what types of sources I need 
+
+I need help in my subject area 
+
+These do not describe my need 
+
+ 
+
+I'm looking for a specific item 
+
+I am looking for a specific book 
+
+I need to search for the book 
+
+I do not know where to find a call number in the library 
+
+I am looking for a specific article 
+
+I am looking for a specific journal 
+
+I am looking for a textbook for my class 
+
+I need materials my instructor put on reserve 
+
+I have a citation but I don't know what type it is 
+
+I am looking for a thesis or dissertation 
+
+I am looking for a specific video 
+
+I want to find or browse journals by subject 
+
+The library does not have the item I need 
+
+I am only supposed to use print or non-Internet sources 
+
+These do not describe my need 
+
+ 
+
+I have a question about articles 
+
+I am looking for peer-reviewed articles 
+
+I am looking for newspaper articles 
+
+I am looking for a specific article 
+
+I do not know if this article is scholarly or peer-reviewed 
+
+I am not sure where to search 
+
+I need search tips 
+
+I searched and found too little or too much 
+
+Nothing I found was in full text 
+
+I am only supposed to use print or non-Internet sources 
+
+I need materials my instructor put on reserve 
+
+A website asked me to pay for an article 
+
+The library does not have the item I need 
+
+These do not describe my need 
+
+ 
+
+I have a question about books 
+
+I want to find books on my topic 
+
+I am looking for a specific book 
+
+I need to search for the book 
+
+I do not know where to find a call number in the library 
+
+I do not know where to find a call number in the library 
+
+I need to select terms or keywords to search with 
+
+I am looking for a textbook for my class 
+
+I need materials my instructor put on reserve 
+
+I do not know whether this book is scholarly 
+
+I want to browse print books in the library on my topic 
+
+I only want to find e-Books 
+
+The library does not have the item I need 
+
+The book I need is checked out 
+
+I live more than 30 miles away and need library materials 
+
+I need to check out or renew library materials 
+
+These do not describe my need 
+
+ 
+
+Are these sources good for my research? 
+
+I do not know which items are relevant to my topic 
+
+I do not know which sources are appropriate to use 
+
+I do not know if this article is scholarly or peer-reviewed 
+
+I do not know what peer reviewed means 
+
+I do not know whether this book is scholarly 
+
+I am only supposed to use print or non-Internet sources 
+
+I do not know whether a work is significant in my field 
+
+I need to know if a journal is significant in my field 
+
+I need to know who has cited a work 
+
+These do not describe my need 
+
+I need help citing or using sources 
+
+I need help citing sources in APA format 
+
+I need help citing sources in MLA format 
+
+I need help citing sources in Chicago format 
+
+I need help integrating sources into my paper 
+
+I need help with quoting and paraphrasing 
+
+I need help avoiding plagiarism 
+
+I need a tool to help me generate citations 
+
+I need a tool to generate quick citations 
+
+I need a tool that will help manage all of my citations 
+
+I do not know how to save or organize what I've found 
+
+These do not describe my need 
+
+ 
+
+I need help with printing, login or access issues 
+
+I need help troubleshooting printing issues 
+
+I want to report a problem with a library resource 
+
+I am having trouble accessing a resource or item 
+
+The library does not have the item I need 
+
+Find It Link is not working 
+
+The e-Book I need is not available through IU 
+
+The book I need is checked out 
+
+A website asked me to pay for an article 
+
+I do not know where to find a call number in the library 
+
+I want to report a problem with a library resource 
+
+I live more than 30 miles away and need library materials 
+
+I am not a current student and need to use the library 
+
+I need a 3D printer 
+
+I need help logging in 
+
+These do not describe my need
