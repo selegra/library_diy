@@ -1,4 +1,5 @@
 import os
+from cairosvg import svg2png
 
 # define the name of the template file. Template file must be in the same folder as this .py file.
 my_template_file_name = "LibraryDIYTileTemplate.svg"
@@ -19,13 +20,15 @@ def duplicate_tile_with_new_text(template_file_name, text, output_dir):
     """
     fin = open(template_file_name, "rt")
     output_svg_filename = text + ".svg"
-    fout = open(os.path.join(output_dir, output_svg_filename), "wt")
+    output_svg_path = os.path.join(output_dir, output_svg_filename)
+    fout = open(output_svg_path, "wt")
 
     for line in fin:
 	    fout.write(line.replace('placeholder_button_text', text))
 	
     fin.close()
     fout.close()
+    return  output_svg_path
 
 # process each text file in this direcory
 for filename in os.listdir('./'):
@@ -38,7 +41,13 @@ for filename in os.listdir('./'):
         fin = open(filename, "rt")
         for line in fin:
             if line.rstrip() != "": # skip empty lines
-                duplicate_tile_with_new_text(my_template_file_name, line.rstrip(), filename[:-4])
+                # create new svg file with replacement text
+                out_svg_path = duplicate_tile_with_new_text(my_template_file_name, line.rstrip(), filename[:-4])
+                # convert output file to png
+                with open(out_svg_path) as svg_fin:
+                    out_png_path = out_svg_path.replace('.svg', '.png')
+                    with open(out_png_path, 'wb') as png_fout:
+                        svg2png(bytestring=bytes(svg_fin.read(),'UTF-8'), write_to=png_fout)
         print("Finished processing " + filename)
 
 print("done")
