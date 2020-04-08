@@ -24,7 +24,7 @@ I want to find or browse journals by subject
 
 ```
 
-[Running the batch button creator](Running-the-script) will create a new directory `some buttons`, in which two button images (.svg and .png) will be created as shown
+[Running the batch button creator](#running-the-script) will create a new directory `some buttons`, in which two button images (.svg and .png) will be created as shown
 
 ![](img/specific_article.png)
 ![](img/journals_by_subj.png)
