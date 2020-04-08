@@ -3,7 +3,7 @@ import os
 # define the name of the template file. Template file must be in the same folder as this .py file.
 my_template_file_name = "LibraryDIYTileTemplate.svg"
 
-# define a function that generates a new svg file with the desired text.
+
 def duplicate_tile_with_new_text(template_file_name, text, output_dir):
     """ duplicate SVG file, replacing template text with new text
 
@@ -16,16 +16,23 @@ def duplicate_tile_with_new_text(template_file_name, text, output_dir):
     output_dir: string
         relative path of desired output directory
 
+    Returns
+    -------
+    string
+        path of output svg file
     """
     fin = open(template_file_name, "rt")
     output_svg_filename = text + ".svg"
-    fout = open(os.path.join(output_dir, output_svg_filename), "wt")
+    output_svg_path = os.path.join(output_dir, output_svg_filename)
+    fout = open(output_svg_path, "wt")
 
     for line in fin:
-	    fout.write(line.replace('placeholder_button_text', text))
-	
+        fout.write(line.replace('placeholder_button_text', text))
+
     fin.close()
     fout.close()
+    return output_svg_path
+
 
 # process each text file in this direcory
 for filename in os.listdir('./'):
