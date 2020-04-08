@@ -2,6 +2,7 @@ import os
 from shlex import quote
 # define the name of the template file. Template file must be in the same folder as this .py file.
 my_template_file_name = "LibraryDIYTileTemplate.svg"
+png_export_dpi = 300
 inkscape_exec_mac = "/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
 
 def duplicate_tile_with_new_text(template_file_name, text, output_dir):
@@ -49,7 +50,11 @@ for filename in os.listdir('./'):
                 svg_out_path = os.path.abspath(svg_out_path)
                 # use inkscape to convert to svg
                 png_out_path = svg_out_path.replace(".svg", ".png")
-                os.system("{} -z -D {} -e {}".format(inkscape_exec_mac, quote(svg_out_path), quote(png_out_path)))
+                os.system("{} -z {} -e {} -d {}".format(
+                    inkscape_exec_mac,
+                    quote(svg_out_path),
+                    quote(png_out_path),
+                    png_export_dpi))
         print("Finished processing " + filename)
 
 print("done")
