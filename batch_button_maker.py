@@ -1,5 +1,6 @@
 import os
 import platform
+import string
 from shlex import quote
 
 # define the name of the template file. Template file must be in the same folder as this .py file.
@@ -19,8 +20,8 @@ else:
 
 def remove_bad_chars(bad_str):
     """ remove bad characters from a filename """
-     valid_chars = "-_.() %s%s" % (string.ascii_letters, string.digits)
-     return ''.join(c for c in bad_str if c in valid_chars)
+    valid_chars = "-_.() %s%s" % (string.ascii_letters, string.digits)
+    return ''.join(c for c in bad_str if c in valid_chars)
     
 def duplicate_tile_with_new_text(template_file_name, text, output_dir):
     """ duplicate SVG file, replacing template text with new text
