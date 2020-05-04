@@ -1,10 +1,28 @@
 import os
+import platform
+import string
 from shlex import quote
+
 # define the name of the template file. Template file must be in the same folder as this .py file.
 my_template_file_name = "LibraryDIYTileTemplate.svg"
 png_export_dpi = 300
-inkscape_exec_mac = "/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
 
+# set inkscape command based on what OS user is using
+current_platform = platform.system()
+if current_platform == "Windows":
+    inkscape_exec = "inkscape"
+
+elif current_platform == "Darwin":
+    inkscape_exec = "/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
+
+else:
+    inkscape_exec = "inkscape"
+
+def remove_bad_chars(bad_str):
+    """ remove bad characters from a filename """
+    valid_chars = "-_.() %s%s" % (string.ascii_letters, string.digits)
+    return ''.join(c for c in bad_str if c in valid_chars)
+    
 def duplicate_tile_with_new_text(template_file_name, text, output_dir):
     """ duplicate SVG file, replacing template text with new text
 
@@ -23,7 +41,7 @@ def duplicate_tile_with_new_text(template_file_name, text, output_dir):
         path of output svg file
     """
     fin = open(template_file_name, "rt")
-    output_svg_filename = text + ".svg"
+    output_svg_filename = remove_bad_chars(text) + ".svg"
     output_svg_path = os.path.join(output_dir, output_svg_filename)
     fout = open(output_svg_path, "wt")
 
@@ -49,12 +67,16 @@ for filename in os.listdir('./'):
                 svg_out_path = duplicate_tile_with_new_text(my_template_file_name, line.rstrip(), filename[:-4])
                 svg_out_path = os.path.abspath(svg_out_path)
                 # use inkscape to convert to svg
-                png_out_path = svg_out_path.replace(".svg", ".png")
-                os.system("{} -z {} -e {} -d {}".format(
-                    inkscape_exec_mac,
-                    quote(svg_out_path),
-                    quote(png_out_path),
-                    png_export_dpi))
+                if platform.system() == "Darwin":
+                    os.system("{} --export-type=\"png\" {} -d {}".format(
+                        inkscape_exec,
+                        quote(svg_out_path),
+                        png_export_dpi))
+                elif platform.system() == "Windows":
+                    os.system("{} --export-type=\"png\" \"{}\" -d {}".format(
+                        inkscape_exec,
+                        svg_out_path,
+                        png_export_dpi))
         print("Finished processing " + filename)
 
 print("done")
