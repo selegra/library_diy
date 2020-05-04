@@ -17,6 +17,11 @@ elif current_platform == "Darwin":
 else:
     inkscape_exec = "inkscape"
 
+def remove_bad_chars(bad_str):
+    """ remove bad characters from a filename """
+     valid_chars = "-_.() %s%s" % (string.ascii_letters, string.digits)
+     return ''.join(c for c in bad_str if c in valid_chars)
+    
 def duplicate_tile_with_new_text(template_file_name, text, output_dir):
     """ duplicate SVG file, replacing template text with new text
 
@@ -35,7 +40,7 @@ def duplicate_tile_with_new_text(template_file_name, text, output_dir):
         path of output svg file
     """
     fin = open(template_file_name, "rt")
-    output_svg_filename = text + ".svg"
+    output_svg_filename = remove_bad_chars(text) + ".svg"
     output_svg_path = os.path.join(output_dir, output_svg_filename)
     fout = open(output_svg_path, "wt")
 
