@@ -1,9 +1,21 @@
 import os
+import platform
 from shlex import quote
+
 # define the name of the template file. Template file must be in the same folder as this .py file.
 my_template_file_name = "LibraryDIYTileTemplate.svg"
 png_export_dpi = 300
-inkscape_exec_mac = "/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
+
+# set inkscape command based on what OS user is using
+current_platform = platform.system()
+if current_platform == "Windows":
+    inkscape_exec = "inkscape"
+
+elif current_platform == "Darwin":
+    inkscape_exec = "/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
+
+else:
+    inkscape_exec = "inkscape"
 
 def duplicate_tile_with_new_text(template_file_name, text, output_dir):
     """ duplicate SVG file, replacing template text with new text
@@ -51,7 +63,7 @@ for filename in os.listdir('./'):
                 # use inkscape to convert to svg
                 png_out_path = svg_out_path.replace(".svg", ".png")
                 os.system("{} -z {} -e {} -d {}".format(
-                    inkscape_exec_mac,
+                    inkscape_exec,
                     quote(svg_out_path),
                     quote(png_out_path),
                     png_export_dpi))
