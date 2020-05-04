@@ -61,10 +61,16 @@ for filename in os.listdir('./'):
                 svg_out_path = duplicate_tile_with_new_text(my_template_file_name, line.rstrip(), filename[:-4])
                 svg_out_path = os.path.abspath(svg_out_path)
                 # use inkscape to convert to svg
-                os.system("{} --export-type=""png"" {} -d {}".format(
-                    inkscape_exec,
-                    quote(svg_out_path),
-                    png_export_dpi))
+                if platform.system() == "Darwin":
+                    os.system("{} --export-type=\"png\" {} -d {}".format(
+                        inkscape_exec,
+                        quote(svg_out_path),
+                        png_export_dpi))
+                elif platform.system() == "Windows":
+                    os.system("{} --export-type=\"png\" \"{}\" -d {}".format(
+                        inkscape_exec,
+                        svg_out_path,
+                        png_export_dpi))
         print("Finished processing " + filename)
 
 print("done")
