@@ -61,11 +61,9 @@ for filename in os.listdir('./'):
                 svg_out_path = duplicate_tile_with_new_text(my_template_file_name, line.rstrip(), filename[:-4])
                 svg_out_path = os.path.abspath(svg_out_path)
                 # use inkscape to convert to svg
-                png_out_path = svg_out_path.replace(".svg", ".png")
-                os.system("{} -z {} -e {} -d {}".format(
+                os.system("{} --export-type=""png"" {} -d {}".format(
                     inkscape_exec,
                     quote(svg_out_path),
-                    quote(png_out_path),
                     png_export_dpi))
         print("Finished processing " + filename)
 
